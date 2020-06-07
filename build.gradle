@@ -1,0 +1,30 @@
+plugins {
+  id 'java'
+  id 'application'
+}
+
+mainClassName = 'se.soy.esb.App'
+group = 'se.soy.esb'
+version = '1.0.0'
+
+ext {
+  versions = [
+    camel       : '3.3.0',
+    slf4j       : '1.7.30',
+    logback     : '1.2.3',
+  ]
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  implementation "org.slf4j:slf4j-api:$versions.slf4j"
+
+  runtimeOnly "ch.qos.logback:logback-classic:$versions.logback"
+}
+
+application {
+}
