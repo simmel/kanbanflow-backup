@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features>
+  <repository>mvn:org.apache.camel.karaf/apache-camel/${camel.version}/xml/features</repository>
+
+  <feature name="${project.artifactId}" version="${camel.version}">
+    <feature version="${camel.version}">camel</feature>
+    <feature version="${camel.version}">camel-blueprint</feature>
+    <feature version="${camel.version}">camel-timer</feature>
+    <feature version="${camel.version}">camel-log</feature>
+    <!-- <bundle>mvn:org.apache.camel.example/${project.artifactId}/${camel.version}</bundle> -->
+  </feature>
+
+</features>

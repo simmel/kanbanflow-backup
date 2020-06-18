@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
+           xsi:schemaLocation="
+         http://www.osgi.org/xmlns/blueprint/v1.0.0 https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+         http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
+         http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd">
+
+  <!-- blueprint property placeholders -->
+  <!-- <cm:property&#45;placeholder persistent&#45;id="my&#45;placeholders" update&#45;strategy="reload"> -->
+  <!--   <cm:default&#45;properties> -->
+  <!--     <cm:property name="netty.port" value="9090"/> -->
+  <!--   </cm:default&#45;properties> -->
+  <!-- </cm:property&#45;placeholder> -->
+
+  <camelContext id="lol-context" xmlns="http://camel.apache.org/schema/blueprint">
+
+    <route id="lol-route">
+      <from uri="timer:lol?period=60000"/>
+      <log message="Hello world!"/>
+    </route>
+
+  </camelContext>
+</blueprint>
