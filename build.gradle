@@ -11,6 +11,7 @@ version = '1.0.0'
 ext {
   versions = [
     camel       : '3.3.0',
+    kanna       : '1.0.0',
   ]
 }
 
@@ -20,7 +21,8 @@ repositories {
 }
 
 dependencies {
-  runtimeOnly files('/home/simmel/code/kanna/build/libs/kanna-1.0.0-all.jar')
+  // FIXME implementation "se.soy.kanna:kanna:$versions.kanna"
+  runtimeOnly files("/home/simmel/code/kanna/build/libs/kanna-$versions.kanna-all.jar")
 
   implementation "org.apache.camel:camel-log:$versions.camel"
   implementation "org.apache.camel:camel-timer:$versions.camel"
