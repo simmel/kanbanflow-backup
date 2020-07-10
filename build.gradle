@@ -1,7 +1,6 @@
 plugins {
   id 'java'
   id 'application'
-  id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 
 mainClassName = 'se.soy.esb.App'
@@ -38,7 +37,4 @@ dependencies {
   // runtimeOnly "org.slf4j:log4j-over-slf4j:$versions.slf4j"
 
   // runtimeOnly "ch.qos.logback:logback-classic:$versions.logback"
-}
-shadowJar {
-  mergeServiceFiles()
 }
