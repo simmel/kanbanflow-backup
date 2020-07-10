@@ -3,8 +3,7 @@ plugins {
   id 'application'
 }
 
-mainClassName = 'se.soy.esb.App'
-// mainClassName = 'se.soy.kanna.Main'
+mainClassName = 'se.soy.kanna.Main'
 group = 'se.soy.esb'
 version = '1.0.0'
 
