@@ -8,17 +8,17 @@
          http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd">
 
   <!-- blueprint property placeholders -->
-  <!-- <cm:property&#45;placeholder persistent&#45;id="my&#45;placeholders" update&#45;strategy="reload"> -->
-  <!--   <cm:default&#45;properties> -->
-  <!--     <cm:property name="netty.port" value="9090"/> -->
-  <!--   </cm:default&#45;properties> -->
-  <!-- </cm:property&#45;placeholder> -->
+  <cm:property-placeholder persistent-id="kanbanflow-backup" update-strategy="reload">
+    <cm:default-properties>
+      <cm:property name="message" value="Hello world!"/>
+    </cm:default-properties>
+  </cm:property-placeholder>
 
   <camelContext id="lol-context" xmlns="http://camel.apache.org/schema/blueprint">
 
     <route id="lol-route">
       <from uri="timer:lol?period=60000"/>
-      <log message="Hello world!"/>
+      <log message="{{message}}"/>
     </route>
 
   </camelContext>
