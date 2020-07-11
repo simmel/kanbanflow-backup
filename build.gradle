@@ -19,8 +19,7 @@ repositories {
 }
 
 dependencies {
-  // FIXME implementation "se.soy.kanna:kanna:$versions.kanna"
-  runtimeOnly files("/home/simmel/code/kanna/build/libs/kanna-$versions.kanna-all.jar")
+  runtimeOnly "se.soy.kanna:kanna:$versions.kanna"
 
   implementation "org.apache.camel:camel-log:$versions.camel"
   implementation "org.apache.camel:camel-timer:$versions.camel"
