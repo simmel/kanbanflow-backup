@@ -3,3 +3,9 @@
 
 # Ignore Gradle build output directory
 build
+
+# camel-blueprint-main uses target/ when builing temp bundles
+target/
+
+# Don't ever commit the config which contains sensitive information
+*.cfg
